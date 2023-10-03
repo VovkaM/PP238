@@ -9,15 +9,12 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import java.util.List;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 @Repository
 @RequiredArgsConstructor
 @Transactional(readOnly = true)
 public class UserDaoImp implements UserDao {
-
-    private static final Logger logger = Logger.getLogger(UserDaoImp.class.getName());
 
     @PersistenceContext
     private EntityManager entityManager;
@@ -65,8 +62,6 @@ public class UserDaoImp implements UserDao {
         if (number != null) {
             counter = Integer.parseInt(number);
         }
-
-        logger.info("founded: " + list.size());
         return list.stream().limit(counter).collect(Collectors.toList());
     }
 }

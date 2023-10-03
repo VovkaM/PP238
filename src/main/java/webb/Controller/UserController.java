@@ -15,7 +15,6 @@ import java.util.List;
 @RequestMapping
 public class UserController {
 
-
     private UserService service;
 
     @GetMapping(value = "/")
@@ -60,7 +59,6 @@ public class UserController {
         service.updateUser(user, Long.parseLong(id));
         return "redirect:/users";
     }
-
 
     @PostMapping("/del_user")
     public String deleteUser(@RequestParam(value = "id") String id) {

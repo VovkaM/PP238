@@ -91,7 +91,7 @@
           <artifactId>maven-war-plugin</artifactId>
           <version>2.4</version>
           <configuration>
-            <warSourceDirectory>src/main/java/web2/WEB-INF</warSourceDirectory>
+            <warSourceDirectory>src/main/java/web/WEB-INF</warSourceDirectory>
             <warName>spring_crud</warName>
             <failOnMissingWebXml>false</failOnMissingWebXml>
           </configuration>
